@@ -141,12 +141,22 @@ button:hover { background-color: #1b4332; }
 
 #add-btn { background-color: #40916c; padding: 10px 14px; font-size: 0.9rem; border-radius: 20px; }
 
+/* Fix infinite canvas growth loop */
 .graph-container {
   margin: 1rem 0;
   background: #f4f7f4;
   padding: 14px;
   border-radius: 16px;
   border: 1px solid #d8e2dc;
+  position: relative;
+  height: 260px; /* Locks container height */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#studyChart {
+  width: 100% !important;
+  height: 190px !important; /* Prevents canvas from expanding infinitely */
 }
 
 .graph-header {
