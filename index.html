@@ -1,63 +1,78 @@
-<canvas id="forest-canvas"></canvas>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What should we learn today?</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
 
-<div class="card">
-  <h1>What should we learn today?</h1>
-  <p>Lets learn together :)</p>
-  
-  <div class="filter-group">
-    <label for="category-filter">Category:</label>
-    <select id="category-filter">
-      <option value="All">All Topics</option>
-      <option value="Science & Nature">Science & Nature</option>
-      <option value="Tech & Coding">Tech & Coding</option>
-      <option value="Arts & Music">Arts & Music</option>
-      <option value="Languages">Languages</option>
-      <option value="Life Skills">Life Skills</option>
-    </select>
-  </div>
+  <canvas id="forest-canvas"></canvas>
 
-  <div id="idea-display" class="idea-box">Click the button!</div>
-  
-  <div class="action-buttons">
-    <button id="generate-btn">Learn Something New</button>
-    <button id="study-count-btn" class="hidden">Study Again (+1)</button>
-    <button id="mark-done-btn" class="hidden">Mastered!</button>
-  </div>
-
-  <form id="add-idea-form">
-    <h3>Add a New Topic</h3>
-    <input type="text" id="new-idea-input" placeholder="Enter a skill or topic..." required />
-    <select id="new-category-select">
-      <option value="Science & Nature">Science & Nature</option>
-      <option value="Tech & Coding">Tech & Coding</option>
-      <option value="Arts & Music">Arts & Music</option>
-      <option value="Languages">Languages</option>
-      <option value="Life Skills">Life Skills</option>
-    </select>
-    <button type="submit" id="add-btn">Add</button>
-  </form>
-
-  <hr>
-
-  <div class="graph-container">
-    <div class="graph-header">
-      <h3>Study Activity</h3>
-      <select id="timeframe-select">
-        <option value="7days">Last 7 Days</option>
-        <option value="month">Last Month</option>
-        <option value="3months">Last 3 Months</option>
-        <option value="6months">Last 6 Months</option>
-        <option value="year">Last Year</option>
-        <option value="alltime">All Time</option>
+  <div class="card">
+    <h1>What should we learn today?</h1>
+    <p>Lets learn together :)</p>
+    
+    <div class="filter-group">
+      <label for="category-filter">Category:</label>
+      <select id="category-filter">
+        <option value="All">All Topics</option>
+        <option value="Science & Nature">Science & Nature</option>
+        <option value="Tech & Coding">Tech & Coding</option>
+        <option value="Arts & Music">Arts & Music</option>
+        <option value="Languages">Languages</option>
+        <option value="Life Skills">Life Skills</option>
       </select>
     </div>
-    <canvas id="studyChart"></canvas>
+
+    <div id="idea-display" class="idea-box">Click the button!</div>
+    
+    <div class="action-buttons">
+      <button id="generate-btn">Learn Something New</button>
+      <button id="study-count-btn" class="hidden">Study Again (+1)</button>
+      <button id="mark-done-btn" class="hidden">Mastered!</button>
+    </div>
+
+    <form id="add-idea-form">
+      <h3>Add a New Topic</h3>
+      <input type="text" id="new-idea-input" placeholder="Enter a skill or topic..." required />
+      <select id="new-category-select">
+        <option value="Science & Nature">Science & Nature</option>
+        <option value="Tech & Coding">Tech & Coding</option>
+        <option value="Arts & Music">Arts & Music</option>
+        <option value="Languages">Languages</option>
+        <option value="Life Skills">Life Skills</option>
+      </select>
+      <button type="submit" id="add-btn">Add</button>
+    </form>
+
+    <hr>
+
+    <div class="graph-container">
+      <div class="graph-header">
+        <h3>Study Activity</h3>
+        <select id="timeframe-select">
+          <option value="7days">Last 7 Days</option>
+          <option value="month">Last Month</option>
+          <option value="3months">Last 3 Months</option>
+          <option value="6months">Last 6 Months</option>
+          <option value="year">Last Year</option>
+          <option value="alltime">All Time</option>
+        </select>
+      </div>
+      <canvas id="studyChart"></canvas>
+    </div>
+
+    <hr>
+
+    <details>
+      <summary>Mastered Topics (<span id="history-count">0</span>)</summary>
+      <ul id="history-list"></ul>
+    </details>
   </div>
 
-  <hr>
-
-  <details>
-    <summary>Mastered Topics (<span id="history-count">0</span>)</summary>
-    <ul id="history-list"></ul>
-  </details>
-</div>
+  <script src="script.js"></script>
+</body>
+</html>
