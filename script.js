@@ -83,10 +83,19 @@
    2. APP LOGIC & STORAGE
    ========================================== */
 const defaultIdeas = [
-  { text: "Plant Identification & Foraging Basics", category: "Science & Nature", count: 0 },
-  { text: "Python Data Structures", category: "Tech & Coding", count: 0 },
-  { text: "Basic Conversational Spanish", category: "Languages", count: 0 },
-  { text: "Acoustic Guitar Chords", category: "Arts & Music", count: 0 },
+  { text: "Plant Identification & Foraging", category: "Science & Nature", count: 0 },
+  { text: "Python", category: "Tech & Coding", count: 0 },
+  { text: "Spanish", category: "Languages", count: 0 },
+   { text: "Russian", category: "Languages", count: 0 },
+   { text: "Arabic", category: "Languages", count: 0 },
+   { text: "ASL", category: "Languages", count: 0 },
+   { text: "Mandarin", category: "Languages", count: 0 },
+   { text: "German", category: "Languages", count: 0 },
+  { text: "Acoustic Guitar", category: "Arts & Music", count: 0 },
+   { text: "Electric Guitar", category: "Arts & Music", count: 0 },
+   { text: "Piano", category: "Arts & Music", count: 0 },
+   { text: "Watercolor and Landscapes", category: "Arts & Music", count: 0 },
+   { text: "Singing", category: "Arts & Music", count: 0 },
   { text: "Essential Outdoor Knots", category: "Life Skills", count: 0 }
 ];
 
